@@ -1,0 +1,20 @@
+" ウインドウに関する設定:
+set columns=350 " ウインドウの幅
+set lines=90 " ウインドウの高さ
+set cmdheight=1 " コマンドラインの高さ(GUI使用時)
+colorscheme custom " (GUI使用時)
+syntax enable
+
+if has('win32') || has('win64')
+  set encoding=cp932
+  set guifont=ゆたぽん（コーディング）:h13  " 1バイト文字 => Consolas:h9
+  set ambiwidth=double
+  set encoding=utf8                    " 文字コードを元に戻す
+  set lsp=1                            " 行間
+  gui
+else
+  set gfn=ゆたぽん（コーディング）:h13  " 1バイト文字 => Consolas:h9
+  set transparency=10
+endif
+
+set visualbell t_vb=
